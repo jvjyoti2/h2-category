@@ -1,15 +1,19 @@
 # internetBankingApplication
 
 
-How to run this zip?
+Internet Banking Application -
 
-1. Download the zip.
-2. Extract the zip.
-3. Open IDE and import new project using the pom.xml provided in the zip.
-4. Run the application via Springboot starter App.
-5. Now go to the web brower and hit below urls-
-	a. localhost:8080/transaction/{category}
-	b. localhost:8080/outgoings
-	c. localhost:8080/transaction/avg/{category}
-	d. localhost:8080/transaction/high/{category}/{year}
-	e. localhost:8080/transaction/low/{category}/{year}
+Prerequisite- 
+Maven should be installed.
+
+Follow the below commands-
+1. Clone the project from https://github.com/jvjyoti2/h2-category.git
+2. Open as new project using pom.xl under application on the IDE of your choice.
+3. Go to IDE terminal and run "mvn clean install". This command will create a jar under .m2 folder.
+4. Run the application using class file "H2CategoryApplication". Now the application is hosted on localserver.
+5. Below are the exposed endpoints-
+	a. localhost:8080/transaction/{category} - for all the transactions for a given category- latest first
+	b. localhost:8080/outgoings - for Total outgoing per category
+	c. localhost:8080/transaction/avg/{category} - Monthly average spend in a given category
+	d. localhost:8080/transaction/high/{category}/{year} - Highest spend in a given category, for a given year
+	e. localhost:8080/transaction/low/{category}/{year} - Lowest spend in a given category, for a given year
